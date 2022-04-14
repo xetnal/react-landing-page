@@ -10,3 +10,20 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+h1 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    font-size: 70px;
+}
+.card{
+    margin: 10px;
+}
+.cards{
+    margin-top: 35px;
+    margin-bottom: 75px;
+}
+.jumbotron {
+    margin-top: 35px;
+    border-radius: 5px;
+    padding: 10px;
+}
