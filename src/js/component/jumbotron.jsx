@@ -1,18 +1,19 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export const Jumbotron = () => {
+export const Jumbotron = (props) => {
 	return (
 		<div className="container jumbotron bg-light">
-			<h1> A Warm Welcome!</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Veritatis dignissimos voluptatum dolorem soluta laboriosam
-				repudiandae praesentium ex, mollitia non modi fugiat ratione ut
-				illo excepturi, incidunt eligendi nemo iste nihil.
-			</p>
+			<h1> {props.title}</h1>
+			<p>{props.text}</p>
 			<button type="button" className="btn btn-primary">
-				Call to action!
+				{props.button}
 			</button>
 		</div>
 	);
+};
+Jumbotron.propTypes = {
+	title: PropTypes.string,
+	text: PropTypes.string,
+	button: PropTypes.string,
 };

@@ -1,11 +1,12 @@
 import React from "react";
-
-export const Navbar = () => {
+import PropTypes from "prop-types";
+import propTypes from "prop-types";
+export const Navbar = (props) => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container-fluid">
 				<a className="navbar-brand" href="#">
-					Navbar
+					{props.title}
 				</a>
 				<button
 					className="navbar-toggler"
@@ -46,4 +47,7 @@ export const Navbar = () => {
 			</div>
 		</nav>
 	);
+};
+Navbar.propTypes = {
+	title: PropTypes.string,
 };
